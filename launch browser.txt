@@ -1,0 +1,23 @@
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class LaunchWebsite {
+
+    public static void main(String[] args) {
+        // Set the path to the ChromeDriver executable
+        System.setProperty("webdriver.chrome.driver", "path/to/chromedriver");
+
+        // Initialize ChromeDriver
+        WebDriver driver = new ChromeDriver();
+
+        // Navigate to the website
+        driver.get("https://www.google.com"); 
+
+        // Get the title of the page
+        String pageTitle = driver.getTitle();
+        System.out.println("Page title is: " + pageTitle);
+
+        // Close the browser
+        driver.quit();
+    }
+}
